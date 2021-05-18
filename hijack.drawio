@@ -59,7 +59,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="17" value="&lt;font style=&quot;font-size: 14px&quot; color=&quot;#ff0000&quot;&gt;sniff x&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="441" y="321" width="100" height="20" as="geometry"/>
+                    <mxGeometry x="427" y="323" width="100" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="" style="endArrow=classic;html=1;strokeColor=#FF0000;strokeWidth=2;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -109,7 +109,7 @@
                 <mxCell id="32" value="&lt;font style=&quot;font-size: 14px&quot;&gt;response...&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="461" y="530" width="100" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="&lt;font style=&quot;font-size: 14px&quot; color=&quot;#ff0000&quot;&gt;seq = y&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="33" value="&lt;font style=&quot;font-size: 14px&quot; color=&quot;#ff0000&quot;&gt;seq = y&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="445" y="502" width="120" height="20" as="geometry"/>
                 </mxCell>
             </root>

